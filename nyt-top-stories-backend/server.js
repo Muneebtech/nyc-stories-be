@@ -9,7 +9,7 @@ const apiKey = process.env.API_KEY; // Access the API key
 
 const helmet = require('helmet');
 app.use(cors({
-    origin: 'http://localhost:3000', // Replace with your trusted origin
+    origin: process.env.PUBLIC_IP, // Replace with your trusted origin
     methods: ['GET', 'POST'], // Specify allowed HTTP methods
     allowedHeaders: ['Authorization', 'Content-Type'], // Specify allowed headers
   }));
